@@ -7,11 +7,16 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI score;
-
+    public int ScoreNumber;
     void Start()
     {
-        
+        EventManager.instance.Suscribe("OnProgress", OnProgress);
     }
 
+    private void OnProgress(params object[] parameters)
+    {
+        ScoreNumber += 1;
+        score.text = "" + ScoreNumber;
+    }
 
 }

@@ -11,4 +11,6 @@ public class WayScript : MonoBehaviour
 
         Instantiate(Road, LocationSpawn.position, Quaternion.identity);
     }
+
+
 }

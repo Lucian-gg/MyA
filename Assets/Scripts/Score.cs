@@ -18,5 +18,4 @@ public class Score : MonoBehaviour
         ScoreNumber += 1;
         score.text = "" + ScoreNumber;
     }
-
 }

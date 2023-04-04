@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * model._speedX, model._speedY); //Set velocity every fixedFrame
 
+        EventManager.instance.Trigger("OnProgress");
     }
 
     

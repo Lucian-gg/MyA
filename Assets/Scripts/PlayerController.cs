@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private List<IWeapon> Weapons = new List<IWeapon>();
     private IWeapon CurrentWeapon;
 
+    private EventManager _instance;
+
     private void Start()
     {
         model = GetComponent<PlayerModel>();
@@ -18,6 +20,10 @@ public class PlayerController : MonoBehaviour
         Weapons.Add(BasicGun);
 
         CurrentWeapon = Weapons[0];
+
+        _instance = EventManager.instance;
+
+      //  InvokeRepeating("UpdateScore", 0, 0.1f);
     }
 
     private void FixedUpdate()
@@ -26,7 +32,7 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * model._speedX, model._speedY); //Set velocity every fixedFrame
 
-        EventManager.instance.Trigger("OnProgress");
+        _instance.Trigger("OnProgress", "funciona");
 
     }
 
@@ -39,5 +45,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+
+    public void UpdateScore()
+    {
+        _instance.Trigger("OnProgress", "funciona");
+    }
+
 
 }

@@ -15,6 +15,8 @@ public class Score : MonoBehaviour
 
     private void OnProgress(params object[] parameters)
     {
+        print(parameters[0]);
+
         ScoreNumber += 1;
         score.text = "" + ScoreNumber;
     }

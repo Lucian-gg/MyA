@@ -338,9 +338,10 @@ GameObject:
   - component: {fileID: 494969021}
   - component: {fileID: 494969024}
   - component: {fileID: 494969025}
+  - component: {fileID: 494969026}
   m_Layer: 0
   m_Name: Main
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,6 +497,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &494969026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494969018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730aaddc12c38844d85df5a531bcd2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 687278284415643738, guid: 18eeb1f5bfa425347afab3f52b01e4a3, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +893,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1224215287087547432, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
+      propertyPath: m_Size.x
+      value: 66.535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224215287087547432, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
+      propertyPath: m_Size.y
+      value: 5.4334793
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224215287087547432, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.08309746
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224215287087547432, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
+      propertyPath: m_Offset.y
+      value: 14.319744
+      objectReference: {fileID: 0}
     - target: {fileID: 1224215287087547433, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
       propertyPath: m_RootOrder
       value: 1

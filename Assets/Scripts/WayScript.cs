@@ -6,11 +6,12 @@ public class WayScript : MonoBehaviour
 {
     public GameObject Road;
     public Transform LocationSpawn;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        Instantiate(Road, LocationSpawn.position, Quaternion.identity);
-    }
+        if(collision.tag == "Player") Instantiate(Road, LocationSpawn.position, Quaternion.identity);
 
+    }
 
 }

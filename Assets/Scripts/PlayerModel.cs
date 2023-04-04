@@ -19,6 +19,6 @@ public class PlayerModel : MonoBehaviour
 
 
     /*
-     Patrones: (Main)MVC. (Obstacles)Factory, Pool, ????. (Conecciones)EventManager.  
+     Patrones: (Main)MVC. (Bullets)Factory, Pool. (Conecciones)EventManager.  
      */
 }

@@ -13,15 +13,11 @@ public class BulletBuilder
         SpeedBuilder = speed;
     }
 
-
     public Bullet Craft()
     {
-
          var prefab = Resources.Load<Bullet>("Prefabs/Bullet1");
           
          prefab.SSpeed = SpeedBuilder;
          return UnityEngine.Object.Instantiate(prefab);
-
     }
-
 }

@@ -54,5 +54,5 @@ public class PlayerController : MonoBehaviour
         _instance.Trigger("OnProgress", "funciona");
     }
 
-
+    
 }

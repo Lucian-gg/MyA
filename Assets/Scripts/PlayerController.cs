@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+
+        
         model = GetComponent<PlayerModel>();
         rb = GetComponent<Rigidbody2D>();
 
-        IWeapon BasicGun = GetComponent<BasicGun>();
-        Weapons.Add(BasicGun);
+        IWeapon AutomaticWeapon = GetComponent<AutomaticWeapon>();
+        Weapons.Add(AutomaticWeapon);
 
         CurrentWeapon = Weapons[0];
 

@@ -1160,7 +1160,7 @@ GameObject:
   - component: {fileID: 1224215287087547432}
   - component: {fileID: 1224215287087547439}
   m_Layer: 0
-  m_Name: Way
+  m_Name: Way2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1249,6 +1249,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Road: {fileID: 1224215287087547434}
   LocationSpawn: {fileID: 1224215287926946998}
+  EnemyList:
+  - {fileID: 2513202804811698251, guid: d898967bd76fc8440ab7bdb6c5318370, type: 3}
+  - {fileID: 3283470148014452343, guid: 0adab6824a16e444cb2769c5685145b3, type: 3}
+  - {fileID: 2329574660609104697, guid: a607e387f199ecd4b9da45d288b4a733, type: 3}
+  - {fileID: 4108396994418553537, guid: 2964e64081bf59940b22f6f72b85865d, type: 3}
 --- !u!1 &1224215287098970075
 GameObject:
   m_ObjectHideFlags: 0

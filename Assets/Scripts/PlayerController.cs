@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
         _instance.Trigger("OnProgress");
 
+
+
     }
 
     private void Update()

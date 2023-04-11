@@ -10,6 +10,7 @@ public class EventManager : MonoBehaviour
 
     private Dictionary<string, Callback> _events = new Dictionary<string, Callback>();
 
+
     private void Awake()
     {
         if (instance == null) instance = this; 
@@ -37,5 +38,6 @@ public class EventManager : MonoBehaviour
     {
         if (_events.ContainsKey(eventid))
             _events[eventid](parameters);
+
     }
 }

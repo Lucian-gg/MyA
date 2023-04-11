@@ -10,12 +10,21 @@ public class Score : MonoBehaviour
     public int ScoreNumber;
     void Start()
     {
-        EventManager.instance.Suscribe("OnProgress", OnProgress);
+        EventManager.instance.Suscribe("OnProgress", OnProgress2);
     }
 
-    private void OnProgress(params object[] parameters)
+    private void FixedUpdate()
     {
         ScoreNumber += 1;
         score.text = "" + ScoreNumber;
     }
+    private void OnProgress2(params object[] parameters)
+    {
+        //print("EventManager: "  + this.GetType().Name);
+    }
 }
+
+
+
+
+// _instance.Trigger("OnProgress"); ej.

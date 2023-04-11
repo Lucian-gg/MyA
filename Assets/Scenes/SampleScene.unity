@@ -1233,6 +1233,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1924319398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3283470148014452343, guid: 0adab6824a16e444cb2769c5685145b3, type: 3}
+  m_PrefabInstance: {fileID: 3283470146113562321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924319399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924319398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167f0778704c41e46ba918f51e575f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1993397937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1224215287087547433, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
@@ -1291,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2329574660609104697, guid: a607e387f199ecd4b9da45d288b4a733, type: 3}
       propertyPath: m_Name
-      value: Enemy1 (2)
+      value: Enemy3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607e387f199ecd4b9da45d288b4a733, type: 3}
@@ -1361,7 +1378,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3283470148014452343, guid: 0adab6824a16e444cb2769c5685145b3, type: 3}
       propertyPath: m_Name
-      value: Enemy1 (1)
+      value: Enemy2
       objectReference: {fileID: 0}
     - target: {fileID: 3283470148014452346, guid: 0adab6824a16e444cb2769c5685145b3, type: 3}
       propertyPath: m_RootOrder
@@ -1407,7 +1424,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3283470148014452345, guid: 0adab6824a16e444cb2769c5685145b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0adab6824a16e444cb2769c5685145b3, type: 3}
 --- !u!1001 &4108396994140920204
 PrefabInstance:
@@ -1418,7 +1436,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4108396994418553537, guid: 2964e64081bf59940b22f6f72b85865d, type: 3}
       propertyPath: m_Name
-      value: Enemy1 (3)
+      value: Enemy4
       objectReference: {fileID: 0}
     - target: {fileID: 4108396994418553566, guid: 2964e64081bf59940b22f6f72b85865d, type: 3}
       propertyPath: m_RootOrder

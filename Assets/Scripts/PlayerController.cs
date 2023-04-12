@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CurrentWeapon.Shoot();
-            EventManager.instance.Trigger("OnEnemyDestroyed");
         }
     }
 }

@@ -20,7 +20,8 @@ public class Score : MonoBehaviour
     }
     private void GainPoints(params object[] parameters)
     {
-
+        ScoreNumber += 1000;
+        score.text = "" + ScoreNumber;
     }
 }
 

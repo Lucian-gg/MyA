@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CurrentWeapon.Shoot();
-            EventManager.instance.Trigger("OnProgress");
+            EventManager.instance.Trigger("OnEnemyDestroyed");
         }
     }
 }

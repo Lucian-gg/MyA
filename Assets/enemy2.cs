@@ -5,4 +5,7 @@ using UnityEngine;
 public class enemy2 : Enemy1
 {
 
+
+
+
 }

@@ -10,12 +10,12 @@ public class Enemy3 : Enemy1
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            EventManager.instance.Trigger("OnEnemyDestroyed");
-
             for (int i = 0; i < 3; i++)
             {
                 GameObject cosa = Instantiate(Mini, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
             }
+
+            EventManager.instance.Trigger("OnEnemyDestroyed");
             Destroy(gameObject);
         }
     }

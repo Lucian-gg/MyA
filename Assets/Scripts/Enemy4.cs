@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Enemy4 : Enemy1
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.tag == "Bullet")
+        {
+            EventManager.instance.Trigger("OnEnemyDestroyed");
+            print("Im invincible! but still give points.");
+        }
     }
 }

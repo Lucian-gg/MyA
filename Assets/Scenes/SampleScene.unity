@@ -1102,16 +1102,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1224215287087547439, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
       propertyPath: EnemyList.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1224215287087547439, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
       propertyPath: EnemyList.Array.data[0]
       value: 
-      objectReference: {fileID: 7011646047665046459, guid: 34100be9ef2d6aa499a66aa1de83a7b4, type: 3}
+      objectReference: {fileID: 5535857005463197218, guid: d898967bd76fc8440ab7bdb6c5318370, type: 3}
     - target: {fileID: 1224215287087547439, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
       propertyPath: EnemyList.Array.data[1]
       value: 
-      objectReference: {fileID: 7011646047665046459, guid: 34100be9ef2d6aa499a66aa1de83a7b4, type: 3}
+      objectReference: {fileID: 7924919403366445086, guid: 951f70ce560c6624abc7bd9a8e5dd044, type: 3}
     - target: {fileID: 1224215287087547439, guid: 0284f766ae67ff746b2e14f9d7b6f76c, type: 3}
       propertyPath: EnemyList.Array.data[2]
       value: 

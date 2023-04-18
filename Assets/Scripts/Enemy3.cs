@@ -5,17 +5,18 @@ using UnityEngine;
 public class Enemy3 : Enemy1
 {
     public GameObject Mini;
-    private void OnDestroy()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        for (int i = 0; i < 3; i++)
+        if (collision.gameObject.tag == "Bullet")
         {
-            GameObject cosa = Instantiate(Mini, transform.position, Quaternion.identity);
+            EventManager.instance.Trigger("OnEnemyDestroyed");
 
-            float z = Random.Range(0, 360f);
-            Quaternion q = cosa.transform.rotation;
-            q.z = z;
-
-            cosa.transform.rotation = q;
+            for (int i = 0; i < 3; i++)
+            {
+                GameObject cosa = Instantiate(Mini, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+            }
+            Destroy(gameObject);
         }
     }
 }

@@ -7,7 +7,7 @@ public class Enemy3 : Enemy1
     public GameObject Mini;
     private void OnDestroy()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             GameObject cosa = Instantiate(Mini, transform.position, Quaternion.identity);
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,13 @@ public class PlayerController : MonoBehaviour
         Weapons.Add(AutomaticWeapon);
 
         CurrentWeapon = Weapons[0];
+
+        EventManager.instance.Suscribe("OnSpeedBuff", Speedboost);
+    }
+
+    private void Speedboost(object[] parameters)
+    {
+        model._speedY += (int)parameters[0];
     }
 
     private void FixedUpdate()
@@ -38,7 +46,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Buff")
         {
-            IPowerUp buff1 = FindObjectOfType<MediKit>();
+            IPowerUp buff1 = collision.gameObject.GetComponent<IPowerUp>();
+            //IPowerUp buff1 = FindObjectOfType<MediKit>();
             buff1.Buff();
         }
     }

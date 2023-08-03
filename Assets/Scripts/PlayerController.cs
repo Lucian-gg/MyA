@@ -24,11 +24,17 @@ public class PlayerController : MonoBehaviour
         CurrentWeapon = Weapons[0];
 
         EventManager.instance.Suscribe("OnSpeedBuff", Speedboost);
+        EventManager.instance.Suscribe("OnDebuffDir", InvertDir);
     }
 
     private void Speedboost(object[] parameters)
     {
         model._speedY += (int)parameters[0];
+    }
+
+    private void InvertDir(object[] parameters)
+    {
+        Modifier *= (int)parameters[0];
     }
 
     private void FixedUpdate()
@@ -52,6 +58,7 @@ public class PlayerController : MonoBehaviour
             IPowerUp buff1 = collision.gameObject.GetComponent<IPowerUp>();
             //IPowerUp buff1 = FindObjectOfType<MediKit>();
             buff1.Buff();
+            print("wtf");
         }
     }
 }

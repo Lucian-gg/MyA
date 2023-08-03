@@ -11,6 +11,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         EventManager.instance.Suscribe("OnEnemyDestroyed", GainPoints);
+        EventManager.instance.Suscribe("OnKitBuff", GainPoints);
     }
 
     private void FixedUpdate()
@@ -18,9 +19,9 @@ public class Score : MonoBehaviour
         ScoreNumber += 1;
         score.text = "" + ScoreNumber;
     }
-    private void GainPoints(params object[] parameters)
+    public void GainPoints(params object[] parameters)
     {
-        ScoreNumber += 1000;
+        ScoreNumber += (int)parameters[0];
         score.text = "" + ScoreNumber;
     }
 }

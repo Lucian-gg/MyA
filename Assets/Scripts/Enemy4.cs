@@ -12,7 +12,7 @@ public class Enemy4 : Enemy1
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            EventManager.instance.Trigger("OnEnemyDestroyed");
+            EventManager.instance.Trigger("OnEnemyDestroyed", 1500);
             print("Im invincible! but still give points.");
         }
     }

@@ -14,7 +14,7 @@ public class Enemy1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            EventManager.instance.Trigger("OnEnemyDestroyed");
+            EventManager.instance.Trigger("OnEnemyDestroyed", 500);
             Destroy(gameObject);
         }
     }

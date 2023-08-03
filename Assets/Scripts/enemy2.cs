@@ -30,7 +30,7 @@ public class enemy2 : Enemy1
 
         if (collision.gameObject.tag == "Bullet")
         {
-            EventManager.instance.Trigger("OnEnemyDestroyed");
+            EventManager.instance.Trigger("OnEnemyDestroyed", 750);
             Destroy(gameObject);
         }
     }

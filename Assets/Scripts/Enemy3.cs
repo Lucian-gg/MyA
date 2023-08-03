@@ -19,7 +19,7 @@ public class Enemy3 : Enemy1
                 GameObject cosa = Instantiate(Mini, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
             }
 
-            EventManager.instance.Trigger("OnEnemyDestroyed");
+            EventManager.instance.Trigger("OnEnemyDestroyed", 1000);
             Destroy(gameObject);
         }
     }

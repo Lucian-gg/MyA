@@ -33,4 +33,13 @@ public class PlayerController : MonoBehaviour
             CurrentWeapon.Shoot();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Buff")
+        {
+            IPowerUp buff1 = FindObjectOfType<MediKit>();
+            buff1.Buff();
+        }
+    }
 }

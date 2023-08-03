@@ -12,6 +12,7 @@ public class WayScript : MonoBehaviour
     private void Start()
     {
         Instantiate(EnemyList[Random.Range(0, EnemyList.Count)], LocationSpawn.position, Quaternion.identity);
+        Destroy(gameObject, 13f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

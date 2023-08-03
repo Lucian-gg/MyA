@@ -12,7 +12,7 @@ public class enemy2 : Enemy1
     {
         Instantiate(wall, transform.position + offset, Quaternion.identity);
         Instantiate(wall, transform.position - offset, Quaternion.identity);
-
+        Destroy(gameObject, 13f);
     }
 
     private void FixedUpdate()

@@ -6,6 +6,10 @@ public class Enemy3 : Enemy1
 {
     public GameObject Mini;
 
+    private void Start()
+    {
+        Destroy(gameObject, 13f);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")

@@ -7,6 +7,7 @@ public class Enemy1 : MonoBehaviour
     private void Start()
     {
         transform.position = new Vector3(transform.position.x + Random.Range(-5f, 5f), transform.position.y, transform.position.z);
+        Destroy(gameObject, 13f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

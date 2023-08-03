@@ -10,8 +10,11 @@ public class PlayerController : MonoBehaviour
     private List<IWeapon> Weapons = new List<IWeapon>();
     private IWeapon CurrentWeapon;
 
+    public float Modifier;
+
     private void Start()
     {
+        Modifier = 1;
         model = GetComponent<PlayerModel>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -31,7 +34,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(horizontalInput * model._speedX, model._speedY); //Set velocity every fixedFrame
+        rb.velocity = new Vector2(horizontalInput*Modifier * model._speedX, model._speedY); //Set velocity every fixedFrame
     }
 
     private void Update()

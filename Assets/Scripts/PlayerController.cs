@@ -25,11 +25,20 @@ public class PlayerController : MonoBehaviour
 
         EventManager.instance.Suscribe("OnSpeedBuff", Speedboost);
         EventManager.instance.Suscribe("OnDebuffDir", InvertDir);
+
+        //StartCoroutine(GrowSpeed());
+    }
+
+    public IEnumerator GrowSpeed()
+    {
+        yield return new WaitForSeconds(5f);
+        model._speedY += 1f;
+        StartCoroutine(GrowSpeed());
     }
 
     private void Speedboost(object[] parameters)
     {
-        model._speedY += (int)parameters[0];
+        model._speedY += (float)parameters[0];
     }
 
     private void InvertDir(object[] parameters)

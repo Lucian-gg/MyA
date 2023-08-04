@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     private List<IWeapon> Weapons = new List<IWeapon>();
     private IWeapon CurrentWeapon;
 
-    public float Modifier;
+    public float Modifier;        //
+    public LayerMask enemyLayer;  //Esto no va acaaaaaa
+    public GameObject Screen;     //
 
     private void Start()
     {
@@ -67,7 +69,16 @@ public class PlayerController : MonoBehaviour
             IPowerUp buff1 = collision.gameObject.GetComponent<IPowerUp>();
             //IPowerUp buff1 = FindObjectOfType<MediKit>();
             buff1.Buff();
-            print("wtf");
+        }
+        
+        if (collision.gameObject.layer == 6)
+        {
+            Transform firstChild = transform.GetChild(0);
+            firstChild.transform.parent = null;
+            Screen.SetActive(true);
+            EventManager.instance.Trigger("OnDefeat");
+            EventManager.instance.Trigger("OnMenuLevelOn");
+            Destroy(gameObject);
         }
     }
 }
